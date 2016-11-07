@@ -2,9 +2,138 @@
 title: Le Wagon Middleman boilerplate
 ---
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+<!-- Your banner code -->
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background-resize.jpg');">
+  <div class="banner-content">
+    <h1>Welcome Home</h1>
+    <p>Rent unique places to stay from Claudia in 190+ countries.</p>
+    <%= link_to "How it works", "http://google.com", class: "btn btn-green btn-lg" %>
+  </div>
 </div>
+
+
+<!-- Your features code -->
+
+<div class="container features text-center padded">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fa fa-globe fa-2x""></i>
+      <h2>Discover the world</h2>
+      <p>The earth is your new home.</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fa fa-credit-card fa-2x""></i>
+      <h2>Pay online</h2>
+      <p>No cash issues anymore.</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fa fa-glass fa-2x""></i>
+      <h2>Meet people</h2>
+      <p>Discover new culture and lifestyle.</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fa fa-heart-o fa-2x""></i>
+      <h2>Share and love</h2>
+      <p>Join a community you will love.</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Your cards code -->
+<div class="wrapper-grey padded">
+  <div class="container">
+    <h2 class="text-center"> Your next trips </h2>
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= image_path "taormina.jpg" %>');">
+        <div class="card-category">Upcoming trip</div>
+        <div class="card-description">
+          <h2>Taormina</h2>
+          <p>Taormina snakes its way up the mountain.</p>
+        </div>
+        <%= image_tag "claudia-new.jpg", class: "card-user avatar avatar-large" %>
+        <%= link_to "", "http://google.com", class: "card-link" %>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+      url('<%= image_path "tuscany.jpg" %>');">
+      <div class="card-category">Upcoming trip</div>
+      <div class="card-description">
+        <h2>Tuscany</h2>
+        <p>Found in the heart of the Italian countryside</p>
+      </div>
+      <%= image_tag "claudia-new.jpg", class: "card-user avatar avatar-large" %>
+      <%= link_to "", "http://google.com", class: "card-link" %>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-4">
+    <div class="card" style= "background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+    url('<%= image_path "annecy.jpg" %>');">
+    <div class="card-category">Upcoming trip</div>
+    <div class="card-description">
+      <h2>Annecy</h2>
+      <p>Alpine town in southeastern France</p>
+    </div>
+    <%= image_tag "claudia-new.jpg", class: "card-user avatar avatar-large" %>
+    <%= link_to "", "http://google.com", class: "card-link" %>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Your newsletter code -->
+
+<div class="text-center padded" id= "newsletter">
+  <h2>Get news from us</h2>
+  <p>Leave us your mail and get news from us</p>
+  <form class= "form-inline">
+    <input type="email" placeholder= "claudia@gmail.com"
+    class= "form-control">
+    <input type= "submit" value= "Subscribe"
+    class= "btn btn-primary btn-bordered btn-bordered-primary"
+  </form>
+</div>
+
+<!-- Your map code -->
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
+
+  var myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+};
+
+var map = new google.maps.Map(document.getElementById('map'), myOptions);
+var marker = new google.maps.Marker({
+  position: myLatlng,
+  map: map,
+  title: "You are here!"
+});
+</script>
+
+<!-- Your footer code -->
+
+
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->

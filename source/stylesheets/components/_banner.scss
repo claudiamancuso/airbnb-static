@@ -1,0 +1,27 @@
+.banner {
+  height: 100vh;
+/*  1vh => 1% of viewport height
+*/  /* Your banner CSS file */
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-size: cover;
+}
+
+.banner-content {
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.banner-content p {
+  font-size: 25px;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
